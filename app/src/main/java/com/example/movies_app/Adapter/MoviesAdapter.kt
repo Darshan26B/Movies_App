@@ -1,12 +1,13 @@
-package com.example.movies_app
+package com.example.movies_app.Adapter
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
+import com.example.movies_app.ApiClient
+import com.example.movies_app.ResultsItem
 import com.example.movies_app.databinding.MoviesLayoutBinding
 
 class MoviesAdapter : Adapter<MoviesAdapter.Moviesholder>() {
