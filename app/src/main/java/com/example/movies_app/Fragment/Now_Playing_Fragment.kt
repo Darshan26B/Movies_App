@@ -1,6 +1,7 @@
 package com.example.movies_app.Fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,6 +24,8 @@ class Now_Playing_Fragment : Fragment() {
     var page = 1
     var adapter = MoviesAdapter()
     var list = ArrayList<ResultsItem>()
+
+    var TAG = "Fragment"
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -54,11 +57,19 @@ class Now_Playing_Fragment : Fragment() {
                     adapter.setListing(list)
                     binding.rcvNowPlayingMovies.layoutManager = LinearLayoutManager(context)
                     binding.rcvNowPlayingMovies.adapter = adapter
+
+                    Log.e(TAG, "onResponse: if", )
+
+                }else {
+
+                    Log.e(TAG, "onResponse: else ", )
+
                 }
             }
 
             override fun onFailure(call: Call<MoviesModel>, t: Throwable) {
 
+                    Log.e(TAG, "onResponse:Failure ${t.message}", )
             }
 
         })

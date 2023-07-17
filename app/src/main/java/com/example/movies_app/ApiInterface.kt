@@ -11,19 +11,17 @@ interface ApiInterface {
         @Query("page")page:Int
     ) :Call<MoviesModel>
 
-    @GET("now_Playing")
-
+    @GET("now_playing")
     fun getPlayingMovies(
         @Query("page")page : Int
     ) : Call<MoviesModel>
 
     @GET("popular")
-
     fun getPopularmovies(
         @Query("page") page: Int
     ): Call<MoviesModel>
 
-    @GET("Top_Rate")
+    @GET("top_rated")
     fun getTopRate(
         @Query("page")page:Int
     ) : Call<MoviesModel>

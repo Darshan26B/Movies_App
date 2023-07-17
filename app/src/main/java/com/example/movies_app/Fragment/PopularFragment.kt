@@ -52,6 +52,7 @@ class PopularFragment : Fragment() {
                     adapter.setListing(list)
                     binding.rcvPopularMovies.layoutManager = LinearLayoutManager(context)
                     binding.rcvPopularMovies.adapter = adapter
+
                 }
             }
 
