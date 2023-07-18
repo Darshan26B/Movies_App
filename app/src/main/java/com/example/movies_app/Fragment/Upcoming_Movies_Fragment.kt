@@ -53,7 +53,7 @@ class Upcoming_Movies_Fragment : Fragment() {
                     list.addAll(upcomingList as ArrayList<ResultsItem>)
 
 
-                    adapter.setListing(upcomingList)
+                    adapter.setListing(list)
                     binding.rcvUpcomingMovies.layoutManager = LinearLayoutManager(context)
                     binding.rcvUpcomingMovies.adapter = adapter
                 }
